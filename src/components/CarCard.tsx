@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Star, Users, Luggage, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { BookingModal } from "@/components/BookingModal";
 
 interface CarCardProps {
   id: string;
@@ -31,7 +33,10 @@ const CarCard = ({
   transmission,
   featured = false,
 }: CarCardProps) => {
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
   return (
+    <>
     <Card className="group hover-lift overflow-hidden border-2 border-border hover:border-primary transition-all duration-300">
       <CardContent className="p-0">
         {/* Image */}
@@ -48,11 +53,9 @@ const CarCard = ({
           )}
           {/* Quick Book Overlay */}
           <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <Link to={`/car/${id}`}>
-              <Button variant="accent" size="lg">
-                Book now
-              </Button>
-            </Link>
+            <Button variant="accent" size="lg" onClick={() => setIsBookingModalOpen(true)}>
+              Book now
+            </Button>
           </div>
         </div>
 
@@ -103,6 +106,18 @@ const CarCard = ({
         </div>
       </CardContent>
     </Card>
+
+    <BookingModal
+      isOpen={isBookingModalOpen}
+      onClose={() => setIsBookingModalOpen(false)}
+      car={{
+        id,
+        name,
+        pricePerDay,
+        image
+      }}
+    />
+    </>
   );
 };
 
