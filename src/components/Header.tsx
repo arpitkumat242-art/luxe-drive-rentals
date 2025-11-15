@@ -3,11 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import { Car, Menu, X, Phone, Mail, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import { BookingModal } from "@/components/BookingModal";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -91,7 +93,7 @@ const Header = () => {
             >
               {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-            <Button variant="accent" size="sm">
+            <Button variant="accent" size="sm" onClick={() => setIsBookingModalOpen(true)}>
               Book now
             </Button>
           </div>
@@ -140,13 +142,19 @@ const Header = () => {
                   <span>hello@luxedrive.com</span>
                 </a>
               </div>
-              <Button variant="accent" className="w-full mt-2">
+              <Button variant="accent" className="w-full mt-2" onClick={() => setIsBookingModalOpen(true)}>
                 Book now
               </Button>
             </div>
           </nav>
         )}
       </div>
+
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        car={null}
+      />
     </header>
   );
 };
