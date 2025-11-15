@@ -51,7 +51,7 @@ export const carsData: Car[] = [
     id: "toyota-innova",
     name: "Toyota Innova",
     type: "Van",
-    image: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop",
     rating: 4.7,
     reviews: 421,
     pricePerDay: 4800,
