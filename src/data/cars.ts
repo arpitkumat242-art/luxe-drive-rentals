@@ -1,0 +1,142 @@
+export interface Car {
+  id: string;
+  name: string;
+  type: string;
+  image: string;
+  rating: number;
+  reviews: number;
+  pricePerDay: number;
+  seats: number;
+  luggage: number;
+  transmission: string;
+  features: string[];
+  fuelPolicy: string;
+  cancellationPolicy: string;
+  featured?: boolean;
+}
+
+export const carsData: Car[] = [
+  {
+    id: "tesla-model-3",
+    name: "Tesla Model 3",
+    type: "Sedan",
+    image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop",
+    rating: 4.8,
+    reviews: 234,
+    pricePerDay: 6500,
+    seats: 5,
+    luggage: 2,
+    transmission: "Automatic",
+    features: ["Autopilot", "Electric", "Premium Sound", "Heated Seats", "Navigation"],
+    fuelPolicy: "Full-to-Full (Electric charging included)",
+    cancellationPolicy: "Free cancellation up to 24 hours before pickup",
+    featured: true,
+  },
+  {
+    id: "hyundai-creta",
+    name: "Hyundai Creta",
+    type: "SUV",
+    image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
+    rating: 4.6,
+    reviews: 512,
+    pricePerDay: 3200,
+    seats: 5,
+    luggage: 3,
+    transmission: "Automatic",
+    features: ["Sunroof", "Cruise Control", "Parking Sensors", "Bluetooth"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 48 hours before pickup",
+  },
+  {
+    id: "toyota-innova",
+    name: "Toyota Innova",
+    type: "Van",
+    image: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&h=600&fit=crop",
+    rating: 4.7,
+    reviews: 421,
+    pricePerDay: 4800,
+    seats: 7,
+    luggage: 4,
+    transmission: "Manual",
+    features: ["Spacious Interior", "3 Rows", "Air Conditioning", "USB Ports"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 48 hours before pickup",
+    featured: true,
+  },
+  {
+    id: "bmw-5-series",
+    name: "BMW 5 Series",
+    type: "Luxury",
+    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&h=600&fit=crop",
+    rating: 4.9,
+    reviews: 189,
+    pricePerDay: 12000,
+    seats: 5,
+    luggage: 3,
+    transmission: "Automatic",
+    features: ["Leather Seats", "Premium Sound", "Adaptive Cruise", "Panoramic Roof"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 24 hours before pickup",
+    featured: true,
+  },
+  {
+    id: "maruti-swift",
+    name: "Maruti Swift",
+    type: "Hatchback",
+    image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&h=600&fit=crop",
+    rating: 4.5,
+    reviews: 689,
+    pricePerDay: 2100,
+    seats: 5,
+    luggage: 2,
+    transmission: "Manual",
+    features: ["Fuel Efficient", "Bluetooth", "Air Conditioning", "Power Windows"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 72 hours before pickup",
+  },
+  {
+    id: "audi-q7",
+    name: "Audi Q7",
+    type: "SUV",
+    image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
+    rating: 4.8,
+    reviews: 167,
+    pricePerDay: 15000,
+    seats: 7,
+    luggage: 4,
+    transmission: "Automatic",
+    features: ["4WD", "Virtual Cockpit", "Matrix LED", "Massage Seats", "Bang & Olufsen"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 24 hours before pickup",
+  },
+  {
+    id: "honda-city",
+    name: "Honda City",
+    type: "Sedan",
+    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+    rating: 4.6,
+    reviews: 543,
+    pricePerDay: 2800,
+    seats: 5,
+    luggage: 2,
+    transmission: "Automatic",
+    features: ["Sunroof", "Lane Watch", "Smart Entry", "Cruise Control"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 48 hours before pickup",
+  },
+  {
+    id: "mahindra-thar",
+    name: "Mahindra Thar",
+    type: "SUV",
+    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop",
+    rating: 4.7,
+    reviews: 298,
+    pricePerDay: 5500,
+    seats: 4,
+    luggage: 2,
+    transmission: "Manual",
+    features: ["4WD", "Off-Road Ready", "Convertible Top", "Adventure Pack"],
+    fuelPolicy: "Full-to-Full",
+    cancellationPolicy: "Free cancellation up to 48 hours before pickup",
+  },
+];
