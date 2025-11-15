@@ -71,12 +71,14 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="flex items-center gap-4 mr-4 text-sm text-muted-foreground">
-              <a href="tel:+1234567890" className="flex items-center gap-1 hover:text-foreground transition-colors">
+            <div className={`flex items-center gap-4 mr-4 text-sm transition-colors ${
+              isScrolled ? "text-muted-foreground" : "text-white"
+            }`}>
+              <a href="tel:+1234567890" className="flex items-center gap-1 hover:text-accent transition-colors">
                 <Phone className="h-4 w-4" />
                 <span>+1 (234) 567-890</span>
               </a>
-              <a href="mailto:hello@luxedrive.com" className="flex items-center gap-1 hover:text-foreground transition-colors">
+              <a href="mailto:hello@luxedrive.com" className="flex items-center gap-1 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4" />
                 <span>hello@luxedrive.com</span>
               </a>
