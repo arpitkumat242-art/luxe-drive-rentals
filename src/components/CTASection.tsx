@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage3 from "@/assets/hero-3.jpg";
 
 const CTASection = () => {
@@ -23,16 +24,20 @@ const CTASection = () => {
           Book your dream car today and experience the freedom of the open road.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button variant="accent" size="lg" className="text-lg px-12">
-            Find a car
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="text-lg px-12 bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-primary"
-          >
-            Learn more
-          </Button>
+          <Link to="/listings">
+            <Button variant="accent" size="lg" className="text-lg px-12">
+              Find a car
+            </Button>
+          </Link>
+          <Link to="/faq">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-12 bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-primary"
+            >
+              Learn more
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
