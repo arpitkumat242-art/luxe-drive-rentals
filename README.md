@@ -1,69 +1,96 @@
 🚗 CarRent — Premium Car Rental Web App
 
-A modern, elegant, and fully responsive Car Rental Platform built with a beautiful UI/UX, smooth animations, and real-world booking features.
-Designed for seamless browsing, instant availability checks, and a delightful rental experience.
+A modern, elegant, and fully animated web app for renting premium cars with a delightful user experience.
 
-✨ Features
-🔍 For Users
+🔥 Highlights
 
-Browse cars with filters (location, date, price, transmission, seats)
+🎨 Premium UI/UX with animations & smooth transitions
 
-Detailed car view (gallery, specs, reviews, host info)
+📅 Real-time availability & booking calendar
 
-Real-time availability calendar
+💳 Secure booking flow with price breakdown & add-ons
 
-Transparent price breakdown with taxes & addons
+💰 Promo code support (WELCOME10)
 
-Promo code: WELCOME10 (10% off)
+🛠️ Host/Agency dashboard + admin controls
 
-Simple, secure booking flow (4 steps)
+🌐 Fully responsive (Mobile + Tablet + Desktop)
 
-Booking history + upcoming trips
+⚡ Fast backend with cache, authentication & rate limiting
 
-Profile & account management
+📄 Swagger API docs + clean folder structure
 
-🧩 For Hosts / Agencies
+🌟 1. Overview
 
-Add / edit / remove car listings
+CarRent is a fully functional Car Rental Web Application designed with a premium aesthetic and smooth micro-interactions.
+Users can browse cars, check availability, apply promo codes, book rentals, and manage their trips.
+Hosts and admins get advanced management features.
 
-Manage pricing, availability, images, features
+Perfect for:
 
-Review bookings & customer details
+Portfolio showcase
 
-🛠 Admin Panel
+Full-stack project demonstration
+
+UI/UX + backend integration example
+
+Scalable real-world product demo
+
+🎨 2. Features
+👤 User Features
+
+Browse cars with advanced filters
+
+View detailed information & image gallery
+
+Real-time availability check
+
+Price calculator (taxes, add-ons, promos)
+
+4-step booking flow
+
+Booking confirmation + email
+
+View upcoming & past trips
+
+Cancel or modify bookings
+
+🧑‍💼 Host / Agency Features
+
+Add & manage car listings
+
+Upload images
+
+Set pricing, seats, transmission, etc.
+
+Manage availability slots
+
+View bookings for their cars
+
+🛠️ Admin Features
 
 Manage users, cars, agencies
 
-Promo code management
+Manage promo codes
 
-Booking overview & logs
+System-wide booking overview
 
-🎨 UI/UX Highlights
+Audit logs
 
-Premium colour palette (Deep Indigo, Gold Accents, Soft Teal)
-
-Smooth animations & micro-interactions
-
-Sticky header, animated search bar, floating booking summary
-
-Modern typography (Poppins + Inter)
-
-Fully responsive (Desktop / Tablet / Mobile)
-
-🧱 Tech Stack
-Frontend
+🧱 3. Tech Stack
+🖥️ Frontend
 
 React / Next.js
 
-TailwindCSS
+Tailwind CSS
 
 Framer Motion
 
 Lottie Animations
 
-Axios / TanStack Query
+Axios / React Query
 
-Backend
+⚙️ Backend
 
 Node.js + TypeScript
 
@@ -71,38 +98,44 @@ NestJS / Express
 
 PostgreSQL (Prisma ORM)
 
-Redis (cache + rate limiting)
+Redis (Cache + Rate Limiting)
 
-JWT auth (access + refresh tokens)
+JWT Authentication
 
-Stripe / Mock Payment Gateway
+Stripe (test mode) / Mock Payment
 
-SendGrid for email notifications
+SendGrid (emails)
 
-DevOps
+🚀 DevOps
 
-Docker & Docker Compose
+Docker + Docker Compose
 
 GitHub Actions CI
 
-Prettier + ESLint
+OpenAPI Swagger Docs
 
-Swagger / OpenAPI documentation
+ESLint + Prettier
 
-🗄️ Database Models (Simplified Overview)
+🗄️ 4. Database Schema (High-Level)
 
-User → accounts & roles
+Main Entities:
 
-Car → listing details
+User (roles: user, host, admin)
 
-Agency → host profiles
+Car
 
-Location → pickup/drop points
+Agency
 
-Booking → rental orders
+Location
 
-Payment → gateway responses
+Booking
 
-PromoCode → discounts
+Payment
 
-Review → car ratings
+PromoCode
+
+Review
+
+Availability
+
+All relationships follow real-world flows (user → booking → car → agency).
